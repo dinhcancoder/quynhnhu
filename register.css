@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    overflow-x: hidden;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form__register {
+    width: 335px;
+    background-color: white;
+    padding: 20px 38px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+}
+
+.form__register-title h3 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 20px 0 40px 0;
+    letter-spacing: 1.2px;
+}
+
+.form__register-title h3 i {
+    position: relative;
+    font-size: 2.5rem;
+    top: 3.2px;
+    margin-left: 5px;
+}
+
+.register__input-btn {
+    margin-bottom: 18px;
+}
+
+.register__input-btn span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.55rem;
+    font-weight: 500;
+}
+
+.register__input-btn input {
+    width: 100%;
+    height: 28px;
+    font-size: 1.5rem;
+    text-indent: 2px;
+    outline: 1px solid black;
+    border: none;
+    border-radius: 2px;
+    letter-spacing: 1.2px;
+}
+
+.register__input-btn input:focus {
+    outline: 1px solid blue;
+}
+
+.error {
+    font-size: 1.22rem;
+    color: red;
+    margin-top: 5px;
+    letter-spacing: .2px;
+}
+
+.form__register-submit button {
+    width: 100%;
+    height: 36.8px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgba(40, 37, 37, 0.8);
+    color: white;
+    font-size: 1.42rem;
+    margin: 21px 0 10px 0;
+    transition: background-color .2s ease-in-out;
+}
+
+.form__register-submit button:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.form__register-other p {
+    font-size: 1.38rem;
+    margin: 15px 0 5px 0;
+}
+
+.form__register-other p a {
+    color: blue;
+    margin-left: 3px;
+}
+
+.register__fail {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.register__fail span {
+    display: block;
+    color: white;
+    background-color: rgb(17, 181, 17);
+    padding: 8px 25px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateX(150%);
+    transition: transform .3s ease-in-out,
+                opacity .2s ease-in-out;
+}

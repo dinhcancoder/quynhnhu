@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Animation </title>
+  <script src="/main.js"></script>
+  <link rel="stylesheet" href="base.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="fontawesome/fontawesome-free-5.15.4/fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="stylesheet" href="facebook.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <input type="checkbox" hidden id="check-btn" class="check-input">
+    <input type="checkbox" hidden id="check-login" class="check-lg">
+    <input type="checkbox" hidden id="check-facebook" class="check-fb">
+    <!-- facebook -->
+    <!-- <div id="facebook">
+            
+        </div> -->
+    <!-- login -->
+    <div class="login" id="login">
+      <div class="login-title">
+        <h2>Login</h2>
+      </div>
+      <div class="login-btn">
+        <div class="login__btn-box">
+          <input type="search" placeholder="Tên đăng nhập ..." id="Tên đăng nhập" class="input user">
+          <p class="error"></p>
+        </div>
+        <div class="login__btn-box">
+          <input type="password" placeholder="Mật khẩu ..." id="Mật khẩu" class="input password">
+          <p class="error"></p>
+        </div>
+        <div class="login-btn-quenmk">
+          <a href="#">Quên mật khẩu ?</a>
+        </div>
+      </div>
+
+      <div class="login-now">
+        <label for="check-login" class="login-input" onclick="login()">
+          Đăng nhập
+        </label>
+      </div>
+
+      <div class="login-footer">
+        <p>Bạn chưa có tài khoản? <a href="./register.html">Đăng ký!</a></p>
+      </div>
+    </div>
+    <div class="card" id="card">
+      <!-- login -->
+
+      <!-- card -->
+      <div class="card__header">
+
+        <div class="card__header-nav">
+          <div class="card__header-nav-icons">
+            <label for="check-login">
+              <i class='icons bx bx-left-arrow-alt'></i>
+            </label>
+            <div class="menu">
+              <label for="check-menu"><i class='icons bx bx-dots-vertical-rounded'></i></label>
+              <input type="checkbox" hidden id="check-menu" class="check-mn">
+              <div class="menu-opacity"></div>
+              <div class="menu-card">
+
+                <div class="menu-card-x">
+                  <label for="check-menu"><i class='bx bx-x'></i></label>
+                </div>
+
+                <div class="menu-card-group">
+                  <div class="menu-card__logo">
+                    <img src="imgpf/avata.jpg" alt="" class="menu-card__logo-img">
+                  </div>
+                  <a href="https://www.facebook.com/profile.php?id=100045172818190">Quỳnh Như.</a>
+                </div>
+
+                <div class="menu-card-nav">
+                  <ul>
+                    <li><a href="#"><i class='nav-icons bx bx-home'></i>Trang chủ</a></li>
+                    <li><a href="#"><i class='nav-icons bx bx-user-pin'></i>Trang cá nhân</a></li>
+                    <li><a href="#"><i class='nav-icons bx bx-group'></i>Nhóm</a></li>
+                    <li><a href="#"><i class='nav-icons bx bx-lock'></i>Cài đặt</a></li>
+                    <li><a href="#"><i class='nav-icons bx bx-help-circle'></i>Trợ giúp</a></li>
+                    <label for="check-login" onclick="logout()"><i class='nav-icons bx bx-log-out'></i>Đăng
+                      xuất</a></label>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__header-avata">
+          <div class="card__header-avata-main">
+            <img src="imgpf/avata.jpg" class="card__header-avata-img">
+            <i class="img-icons fas fa-circle"></i>
+          </div>
+        </div>
+        <div class="card__header-title">
+          <div class="card__header-title-main">
+            <a href="https://www.facebook.com/profile.php?id=100045172818190" class="card__header-title-name">
+              Quỳnh Như. </i> <i class="card__header-title-icons fas fa-check-circle"></i>
+            </a>
+            <p class="card__header-title-tieusu">
+              ✝️👸
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__body">
+        <div class="card__body-information">
+          <div class="card__body-information-icons">
+            <div class="information__icons-box"><i class='facebook bx bxl-facebook'></i></div>
+            <div class="information__icons-box"><i class='twitter bx bxl-twitter'></i></div>
+            <div class="information__icons-box"><i class='instagram bx bxl-instagram'></i></div>
+            <div class="information__icons-box"><i class='youtube bx bxl-youtube'></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__bodyy">
+        <div class="card__bodyy-btn">
+          <a href="https://www.facebook.com/profile.php?id=100045172818190">Message<i
+              class='message bx bx-message-rounded-dots'></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100045172818190">Follow<i class='follow bx bx-user'></i></a>
+        </div>
+      </div>
+
+      <div class="card__footer">
+        <div class="card__footer-other">
+          <div class="card__footer-heart">
+            17.6k<i class='heart bx bx-heart'></i>
+          </div>
+          <div class="card__footer-message">
+            10.2k<i class='messagee bx bx-message-rounded'></i>
+          </div>
+          <div class="card__footer-share">
+            2.2k<i class='share bx bx-share'></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__footer1">
+        <div class="card__footer1-language">
+          <label for="check-btn" class="dark">
+            <i class="fas fa-moon"></i>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="thongbao">
+    <p>tài khoản hoặc mật khẩu không chính xác!</p>
+  </div>
+
+  <script src="./index.js"></script>
+
+</body>
+
+</html>

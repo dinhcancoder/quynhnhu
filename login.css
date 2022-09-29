@@ -1,0 +1,740 @@
+body {
+  background: linear-gradient(to right, #1d1a29, #7f799e);
+  background: linear-gradient(to right, #42275a, #734b6d);
+  z-index: -1;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  min-height: 520px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid rgb(167, 167, 167);
+  box-shadow: 0 0 2px rgb(51, 51, 51);
+  transform: scale(0);
+  transition: transform .3s ease-in-out;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.login {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 350px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 2px solid rgb(167, 167, 167);
+  box-shadow: 0 0 2px rgb(51, 51, 51);
+  transform: scale(1);
+  transition: transform .3s ease-in-out;
+  z-index: 1;
+}
+
+.login-title {
+  padding: 25px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.login-title h2 {
+  color: transparent;
+  font-size: 45px;
+  font-weight: 600;
+  background-image: linear-gradient(90deg, #6e40aa, #6154c8, #4c6edb, #368ce1, #24aad8, #1ac7c2, #1ddea3, #30ee83, #52f667, #7ef658, #7ef658);
+  background-clip: text;
+  -webkit-background-clip: text;
+  letter-spacing: 3.5px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.login-btn {
+  margin-top: 52px;
+  padding: 0 40px;
+}
+
+.login__btn-box input {
+  width: 100%;
+  height: 38px;
+  border: none;
+  font-size: 16px;
+  text-indent: 10px;
+  letter-spacing: .2px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-bottom: 1px solid rgb(32, 32, 32);
+  margin-top: 28px;
+  outline: none;
+  transition: letter-spacing .3s ease-in-out;
+}
+
+.login__btn-box input:focus {
+  letter-spacing: .5px;
+  border-bottom: 1px solid rgb(138, 138, 138);
+}
+
+.login-btn-quenmk {
+  width: 100%;
+}
+
+.login-btn-quenmk a {
+  display: inline-block;
+  font-size: 15px;
+  text-align: left;
+  color: rgb(14, 84, 205);
+  text-decoration: none;
+  ;
+  margin-left: 8.8px;
+  margin-top: 25px;
+  transition: all .2s ease-in-out;
+}
+
+.login-btn-quenmk a:hover {
+  color: rgb(34, 115, 255);
+  letter-spacing: .2px;
+}
+
+.login-now {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.login-input {
+  position: relative;
+  font-size: 17.2px;
+  letter-spacing: .5px;
+  color: rgb(231, 231, 231);
+  display: block;
+  width: 75%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(29, 28, 28);
+  transition: all .3s ease-in-out;
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 2px;
+}
+
+.login-input:hover {
+  background-color: rgb(226, 226, 226);
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+}
+
+.login-footer {
+  margin-top: 28px;
+  padding-bottom: 40px;
+}
+
+.login-footer p {
+  font-size: 15.5px;
+  color: white;
+  margin-left: 45px;
+  letter-spacing: .2px;
+}
+
+.login-footer p a {
+  color: rgb(17, 200, 224);
+  text-decoration: none;
+  margin-left: 8px;
+  transition: .2s;
+}
+
+.login-footer p a:hover {
+  font-size: 16.5px;
+  color: rgb(0, 225, 255);
+}
+
+/* header nav */
+.card__header {
+  height: 50%;
+}
+
+.card__header-nav-icons {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  color: black;
+  font-size: 25px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.icons:hover,
+.menu-card-x label i:hover {
+  color: rgb(255, 0, 149);
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-card {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 235px;
+  height: 538px;
+  bottom: 0;
+  z-index: 999;
+  background-color: black;
+
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out,
+    opacity .3s ease-in-out;
+}
+
+.menu-card-x {
+  position: relative;
+}
+
+.menu-card-x label i {
+  color: white;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.menu-card-group {
+  display: flex;
+  align-items: center;
+  padding: 35px 0 0 15px;
+}
+
+.menu-card__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-card__logo-img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.menu-card-group a {
+  color: white;
+  text-decoration: none;
+  font-size: 16.8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 15px;
+}
+
+.menu-card-nav ul {
+  margin-top: 25px;
+}
+
+.menu-card-nav ul li {
+  list-style: none;
+  text-indent: 15px;
+}
+
+.menu-card-nav ul li a {
+  display: block;
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  ;
+  padding: 18px 0;
+  transition: all .3s ease-in-out;
+}
+
+.menu-card-nav ul li a:hover,
+.menu-card-nav ul label:hover {
+  letter-spacing: .8px;
+  color: orange;
+  background-color: rgb(44, 41, 41);
+}
+
+.menu-card-nav ul label {
+  position: relative;
+  display: block;
+  color: white;
+  padding: 18px 0;
+  cursor: pointer;
+}
+
+.menu-card-nav ul label i {
+  margin-left: 26px;
+}
+
+.nav-icons {
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  left: -10px;
+}
+
+.check-mn:checked ~ .menu-card {
+  opacity: 0.98;
+  transform: translateX(0);
+  transition-delay: .1s;
+}
+
+/* avata */
+.card__header-avata {
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.card__header-avata-main {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -25px;
+  z-index: -11;
+}
+
+.card__header-avata-img {
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 0;
+  border: 1px solid rgb(235, 235, 235);
+  padding: 2.5px;
+  background-color: white;
+}
+
+.img-icons {
+  position: absolute;
+  color: #59d539;
+  bottom: 12px;
+  right: 25px;
+  font-size: 20px;
+}
+
+/* name + tieusu */
+.card__header-title-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__header-title-name {
+  position: relative;
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 0;
+  letter-spacing: .2px;
+  z-index: -1;
+}
+
+.card__header-title-icons {
+  font-size: 18px;
+  color: rgb(0, 102, 255);
+  position: absolute;
+  top: 15.8px;
+  margin-left: 5px;
+  z-index: -99;
+}
+
+.card__header-title-tieusu {
+  color: rgb(37, 35, 35);
+  font-size: 15.5px;
+  letter-spacing: .8px;
+}
+
+/* body information icons */
+.card__body-information {
+  margin: 20px 0;
+}
+
+.card__body-information-icons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.information__icons-box {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 6px rgb(235, 235, 235);
+  border-radius: 50%;
+  border: 1.5px solid rgb(230, 230, 230);
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  z-index: -1111;
+}
+
+.information__icons-box i {
+  position: relative;
+  z-index: 0;
+  font-size: 22px;
+  transition: transform .2s ease-in-out;
+}
+
+.facebook {
+  color: blue
+}
+
+.twitter {
+  color: #1da1f2;
+}
+
+.instagram {
+  color: #ff006f;
+}
+
+.youtube {
+  color: red;
+}
+
+.information__icons-box:hover .facebook,
+.information__icons-box:hover .twitter,
+.information__icons-box:hover .instagram,
+.information__icons-box:hover .youtube {
+  transform: scale(1.24);
+}
+
+/* btn */
+.card__bodyy {
+  position: relative;
+  padding: 15px 0;
+  z-index: -1;
+}
+
+.card__bodyy-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card__bodyy-btn a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+
+  width: 125px;
+  height: 38px;
+  line-height: 38px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1.2px solid rgb(230, 230, 230);
+  background-color: white;
+  box-shadow: 0 2px 6px rgb(226, 226, 226);
+  padding-right: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.card__bodyy-btn a:hover {
+  color: blue;
+  box-shadow: 0 1px 2px blue;
+  letter-spacing: .5px;
+}
+
+.message,
+.follow {
+  position: absolute;
+  top: 10px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+
+/* footer */
+.card__footer {
+  padding: 20px 0;
+}
+
+.card__footer-other {
+  display: flex;
+  justify-content: center;
+}
+
+.card__footer-heart,
+.card__footer-message,
+.card__footer-share {
+  display: flex;
+  align-items: center;
+}
+
+.card__footer-message {
+  position: relative;
+  margin: 0 42px;
+}
+
+.card__footer-message::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -20px;
+  width: 1px;
+  height: 100%;
+  background-color: rgb(218, 218, 218);
+  z-index: -1;
+}
+
+.card__footer-message::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: -20px;
+  width: 2.2px;
+  height: 100%;
+  background-color: rgb(218, 218, 218);
+  z-index: -1;
+}
+
+.heart,
+.messagee,
+.share {
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+/* footer1 */
+.card__footer1 {
+  margin-top: 2px;
+  padding-bottom: 18px;
+}
+
+.card__footer1-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark {
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 5px black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: black;
+}
+
+.dark i {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.dark:hover i {
+  color: rgb(255, 0, 0);
+}
+
+/* checked */
+.check-input:checked ~ .card {
+  transition: all .8s ease-in-out;
+  background-color: black;
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons i {
+  color: white;
+}
+
+.check-input:checked ~ .card .card__header-title .card__header-title-main .card__header-title-name {
+  color: white;
+}
+
+.check-input:checked ~ .card .card__header-title .card__header-title-main .card__header-title-tieusu {
+  color: white;
+}
+
+.check-input:checked ~ .card .card__body .card__body-information .information__icons-box {
+  position: relative;
+  z-index: -111;
+  background-color: black;
+  border: 2px solid rgb(63, 66, 63);
+  box-shadow: none;
+}
+
+.check-input:checked ~ .card .card__body .card__body-information .information__icons-box:first-child:hover {
+  background-color: rgb(0, 68, 255);
+}
+
+.check-input:checked ~ .card .card__body .card__body-information .information__icons-box:nth-child(2):hover {
+  background-color: rgb(0, 183, 255);
+}
+
+.check-input:checked ~ .card .card__body .card__body-information .information__icons-box:nth-child(3):hover {
+  background-color: rgb(255, 0, 212);
+}
+
+.check-input:checked ~ .card .card__body .card__body-information .information__icons-box:nth-child(4):hover {
+  background-color: rgb(240, 8, 8);
+}
+
+
+.check-input:checked ~ .card .card__body .card__body-information .information__icons-box i {
+  color: white;
+}
+
+.check-input:checked ~ .card .card__bodyy .card__bodyy-btn a {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(230, 230, 230);
+  box-shadow: 0 1px 3px rgb(226, 226, 226);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.check-input:checked ~ .card .card__bodyy .card__bodyy-btn a:hover {
+  color: rgb(157, 255, 0);
+  border: 1px solid palegreen;
+  box-shadow: 0 1px 3px palegreen;
+  letter-spacing: .3px;
+}
+
+.check-input:checked ~ .card .card__footer .card__footer-heart,
+.check-input:checked ~ .card .card__footer .card__footer-message,
+.check-input:checked ~ .card .card__footer .card__footer-share {
+  color: white;
+}
+
+.check-input:checked ~ .card .card__footer .card__footer-message::after {
+  width: 1px;
+}
+
+.check-input:checked ~ .card .card__footer1 .card__footer1-language a,
+.check-input:checked ~ .card .card__footer1 .card__footer1-language i {
+  color: rgb(192, 192, 192);
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons label i:hover,
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-x label i:hover {
+  color: rgb(0, 60, 255);
+}
+
+.check-input:checked ~ .card .card__footer1 .card__footer1-language .dark {
+  background-color: white;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  z-index: 0;
+}
+
+.check-input:checked ~ .card .card__footer1 .card__footer1-language .dark i {
+  color: black;
+}
+
+.check-input:checked ~ .card .card__footer1 .card__footer1-language .dark:hover i {
+  color: rgb(0, 48, 182);
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card {
+  background-color: white;
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul li a,
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul li a i,
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul label,
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul label i {
+  color: black;
+  transition: all .2s ease-in-out;
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul li a:hover,
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul label:hover {
+  color: blue;
+  background-color: rgb(236, 236, 236);
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul li a:hover i {
+  color: blue;
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-nav ul label:hover i {
+  color: blue;
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card .menu-card-x label i {
+  color: black;
+}
+
+.check-input:checked ~ .card .card__header .card__header-nav .card__header-nav-icons .menu .menu-card-group a {
+  color: black;
+}
+
+.error {
+  color: red;
+  font-size: 12.5px;
+  margin-left: 10px;
+  margin-top: 5px;
+  letter-spacing: .3px;
+}
+
+.thongbao {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.thongbao p {
+  font-size: 14.2px;
+  color: white;
+  background-color: red;
+  padding: 8px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateX(150%);
+  transition: transform .4s ease-in-out,
+    opacity .3s ease-in-out;
+}
+
+#logout {
+  color: white;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+#logout:hover {
+  color: orange;
+}
+
+@media (max-width: 368px) {
+
+  .card,
+  .login {
+    width: 318px;
+  }
+}
+
+.logo {
+  overflow: hidden;
+}
